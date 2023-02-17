@@ -1,1 +1,3 @@
-# prakerin with Jogjaide Software House Makassar
+# prakerin_mobile_fe
+
+Vue JS 3
