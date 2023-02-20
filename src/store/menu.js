@@ -34,6 +34,15 @@ export const useTransactionStore = defineStore('transaction', {
       // })
       return "400 Mhs"; //total
     },
+    totalMahasiswaLulusUjiProposal: state => {
+      let total = 0
+      // state.transaction.forEach(item => {
+      //   if (item.isIncome === false) {
+      //     total += item.amount
+      //   }
+      // })
+      return "400 Mhs"; //total
+    },
     totalIncome: state => {
       let total = 0
       state.transaction.forEach(item => {
