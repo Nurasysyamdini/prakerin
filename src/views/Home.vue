@@ -25,6 +25,16 @@
                 </template>
             </Card>
         </div>
+        <div>
+            <Card @click="router.push({ name: 'AddOutcome'})" :menu="transactionStore.totalMahasiswaLulusUjiProposal" :height="120" width="full">
+            <!-- <Card @click="router.push({ name: 'AddOutcome'})" :amount="234" :height="120" width="full"> -->
+                <template #icon>
+                    <CardIcon color="secondary">
+                        <Fire className="text-[24px]" /> Uji Hasil
+                    </CardIcon>
+                </template>
+            </Card>
+        </div>
     </div>
     <div>
         <RecentSection />
