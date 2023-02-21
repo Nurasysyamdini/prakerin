@@ -86,7 +86,7 @@ const { allTransaction, incomeTransaction, outComeTransaction } = storeToRefs(tr
 const categories = ref({
   "Uji Proposal": allTransaction,
   "Uji Hasil": allTransaction,
-  "Uji Tutup" : outComeTransaction
+  "Uji Tutup" : allTransaction
 })
 
 function klikMenu(name) {
