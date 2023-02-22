@@ -54,7 +54,7 @@ const onlogin = async () => {
         username: identifier.value,
         password: password.value
       }
-    await axios.post('/user/login',
+    await axios.post('/loginUser',
     qs.stringify(formData),
     {
     headers: {

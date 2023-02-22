@@ -30,7 +30,7 @@
             <!-- <Card @click="router.push({ name: 'AddOutcome'})" :amount="234" :height="120" width="full"> -->
                 <template #icon>
                     <CardIcon color="secondary">
-                        <Fire className="text-[24px]" /> Uji Hasil
+                        <Fire className="text-[24px]" /> Uji Tutup
                     </CardIcon>
                 </template>
             </Card>
