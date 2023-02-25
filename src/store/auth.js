@@ -18,7 +18,7 @@ export const useAuth = defineStore({
         async getUserLogedIn(){
             await getUser()
             .then(res => {
-                this.user = res.data.data.truck_user
+                this.user = res.data.data
             })
             .catch(err => {
                 console.log(err)

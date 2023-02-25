@@ -63,21 +63,36 @@ const onlogin = async () => {
     }
     })
     .then(res => {
+        if(res.data.pesan == "Login gagal"){
+
+            commonStore.showToast({
+                message: 'password atau username salah',
+                type: 'error',
+                show: true
+            })
+
+            commonStore.$patch({
+                isLoading: false
+            })
+
+        } else {
+
+            localStorage.setItem('isAuthenticated', true)
+            localStorage.setItem('truckingToken', res.data.token)
+
+            store.$patch({
+                isAuthenticated: true,
+                user: res.data.user,
+                token: res.data.token
+            })
+
+            commonStore.$patch({
+                isLoading: false
+            })
+
+            router.push('/')
+        }
         
-        localStorage.setItem('isAuthenticated', true)
-        localStorage.setItem('truckingToken', res.data.token)
-
-        store.$patch({
-            isAuthenticated: true,
-            user: res.data.user,
-            token: res.data.token
-        })
-
-        commonStore.$patch({
-            isLoading: false
-        })
-
-        router.push('/')
     })
     .catch(err => {
         commonStore.$patch({
