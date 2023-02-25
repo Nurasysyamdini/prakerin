@@ -8,7 +8,7 @@ export const useTransactionStore = defineStore('transaction', {
     async get(){
         await getTransactions()
         .then(res => {
-            this.transaction = res.data.data.nobel_mm_uji_hasil
+            this.transaction = res.data
         })
         .catch(err => {
             console.log(err)

@@ -8,8 +8,8 @@ export const useMahasiswaStore = defineStore('transaction', {
     async get(){
         await getTransactions()
         .then(res => {
-            this.transaction = res
-            //console.log("get transaction")
+            this.transaction = res.data
+            console.log("get transaction")
         })
         .catch(err => {
             console.log(err)
