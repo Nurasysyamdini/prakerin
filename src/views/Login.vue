@@ -63,22 +63,35 @@ const onlogin = async () => {
     }
     })
     .then(res => {
+        if(res.data.pesan =="Login gagal"){
+            alert("Login gagal");
+
+            commonStore.$patch({
+                isLoading: false
+            })
+        }else {
+
+            localStorage.setItem('isAuthenticated', true)
+            localStorage.setItem('truckingToken', "Token Test")
+
+            store.$patch({
+                isAuthenticated: true,
+                user: res.data.user,
+                token: res.data.token
+          
+        })
+  
+            commonStore.$patch({
+                isLoading: false
+            
+        })
+
+        router.push('/')  
         
-        localStorage.setItem('isAuthenticated', true)
-        localStorage.setItem('truckingToken', res.data.token)
+        }
+          
 
-        store.$patch({
-            isAuthenticated: true,
-            user: res.data.user,
-            token: res.data.token
         })
-
-        commonStore.$patch({
-            isLoading: false
-        })
-
-        router.push('/')
-    })
     .catch(err => {
         commonStore.$patch({
             isLoading: false

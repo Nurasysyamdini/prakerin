@@ -47,18 +47,18 @@ const router = useRouter();
 const commonStore = useCommonStore();
 const onRegis = async () => {
     // // router.push('/')
-    await axios.post('/auth/local/register' , {
+    await axios.post('/registerUser' , {
         username: username.value,
         email: email.value,
         password: password.value
     })
     .then(res => {
-        console.log(res)
-        localStorage.setItem('isAuthenticated', true)
-        localStorage.setItem('token', res.data.jwt)
-        router.push('/')
-    })
-    .catch(err => {
+         console.log(res)
+         localStorage.setItem('isAuthenticated', true)
+         localStorage.setItem('Token', )
+         router.push('/')              
+        })
+     .catch(err => {
         console.log(err)
         commonStore.showToast({
             message: 'Username atau email sudah digunakan',
