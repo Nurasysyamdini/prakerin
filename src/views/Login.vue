@@ -63,10 +63,8 @@ const onlogin = async () => {
     }
     })
     .then(res => {
-<<<<<<< HEAD
-        if(res.data.pesan =="Login gagal"){
-            alert("Login gagal");
-=======
+
+
         if(res.data.pesan == "Login gagal"){
 
             commonStore.showToast({
@@ -74,55 +72,40 @@ const onlogin = async () => {
                 type: 'error',
                 show: true
             })
->>>>>>> 1580b70fa5097ed13f39924457c3c8db2873b7be
+
 
             commonStore.$patch({
                 isLoading: false
             })
-<<<<<<< HEAD
-        }else {
 
-            localStorage.setItem('isAuthenticated', true)
-            localStorage.setItem('truckingToken', "Token Test")
-=======
-
+  
         } else {
 
             localStorage.setItem('isAuthenticated', true)
             localStorage.setItem('truckingToken', res.data.token)
->>>>>>> 1580b70fa5097ed13f39924457c3c8db2873b7be
+
 
             store.$patch({
                 isAuthenticated: true,
                 user: res.data.user,
                 token: res.data.token
-<<<<<<< HEAD
+
           
-        })
+            })
   
             commonStore.$patch({
                 isLoading: false
             
-        })
+            })
 
-        router.push('/')  
+            router.push('/')  
         
         }
           
 
         })
-=======
-            })
 
-            commonStore.$patch({
-                isLoading: false
-            })
 
-            router.push('/')
-        }
-        
-    })
->>>>>>> 1580b70fa5097ed13f39924457c3c8db2873b7be
     .catch(err => {
         commonStore.$patch({
             isLoading: false
