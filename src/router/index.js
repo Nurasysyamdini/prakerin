@@ -16,7 +16,7 @@ const requestOptions = {
 
 let response = await fetch(
   //"https://pps-stie-nobel.org/api/nobel_mm_uji_hasil/all",
-  "https://nobel-api.jogjaide.web.id/apinobel/uji_proposal",
+ "https://nobel-api.jogjaide.web.id/apinobel/uji_proposal",
   requestOptions
 )
 .then(response => response.json())

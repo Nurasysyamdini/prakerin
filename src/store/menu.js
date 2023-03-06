@@ -41,7 +41,7 @@ export const useTransactionStore = defineStore('transaction', {
       //     total += item.amount
       //   }
       // })
-      return "400 Mhs"; //total
+      return "200 Mhs"; //total
     },
     totalIncome: state => {
       let total = 0
