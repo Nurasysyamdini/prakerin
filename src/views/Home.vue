@@ -26,7 +26,7 @@
             </Card>
         </div>
         <div>
-            <Card @click="router.push({ name: 'AddOutcome'})" :menu="transactionStore.totalMahasiswaLulusUjiProposal" :height="120" width="full">
+            <Card @click="router.push({ name: 'AddOutcome'})" :menu="transactionStore.totalMahasiswaLulusUjiTutup" :height="120" width="full">
             <!-- <Card @click="router.push({ name: 'AddOutcome'})" :amount="234" :height="120" width="full"> -->
                 <template #icon>
                     <CardIcon color="secondary">

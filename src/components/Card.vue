@@ -1,4 +1,4 @@
-<template>
+<template>\
     <div class="flex p-6 bg-white rounded-md shadow-md cursor-pointer" :class="`${className} ${hoverStyle}`" :style="currentStyle">
         <div class="flex items-center h-full my-uto" >
             <slot name="icon"></slot>

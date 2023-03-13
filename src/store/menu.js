@@ -9,6 +9,7 @@ export const useTransactionStore = defineStore('transaction', {
         await getTransactions()
         .then(res => {
             this.transaction = res.data
+            
         })
         .catch(err => {
             console.log(err)
